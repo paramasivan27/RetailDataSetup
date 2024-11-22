@@ -46,13 +46,8 @@ CREATE TABLE Receipts (
     receipt_cost NUMERIC(10, 2) NOT NULL
 );
 
-CREATE TABLE Sales (
-    sale_id SERIAL PRIMARY KEY,
-    product_id INT REFERENCES Product(product_id) ON DELETE CASCADE,
-    location_id INT REFERENCES Location(location_id) ON DELETE CASCADE,
-    number_of_units_sold INT NOT NULL,
-    sales_retail NUMERIC(10, 2) NOT NULL
-);
+
+
 
 CREATE TABLE Event (
     event_id SERIAL PRIMARY KEY,
